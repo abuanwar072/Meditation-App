@@ -1,6 +1,6 @@
 # Daily Exercises App - Flutter UI
 
-## [Watch it on YouTube - Coming soon](#)
+## [Watch it on YouTube - Coming soon](https://youtu.be/qQ75cxc5q8o)
 
 **Packages we are using:**
 

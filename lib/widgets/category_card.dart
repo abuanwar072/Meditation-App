@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:meditation_app/constants.dart';
+
+import '../constants.dart';
 
 class CategoryCard extends StatelessWidget {
   final String svgSrc;
   final String title;
-  final Function press;
+  final VoidCallback press;
   const CategoryCard({
-    Key key,
-    this.svgSrc,
-    this.title,
-    this.press,
+    Key? key,
+    required this.svgSrc,
+    required this.title,
+    required this.press,
   }) : super(key: key);
 
   @override
@@ -22,7 +23,7 @@ class CategoryCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(13),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               offset: Offset(0, 17),
               blurRadius: 17,
@@ -39,16 +40,16 @@ class CategoryCard extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: Column(
                 children: <Widget>[
-                  Spacer(),
+                  const Spacer(),
                   SvgPicture.asset(svgSrc),
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     title,
                     textAlign: TextAlign.center,
                     style: Theme.of(context)
                         .textTheme
-                        .title
-                        .copyWith(fontSize: 15),
+                        .titleLarge
+                        ?.copyWith(fontSize: 15),
                   )
                 ],
               ),
